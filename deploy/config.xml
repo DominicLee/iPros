@@ -1,0 +1,42 @@
+<root>
+  <client clientlogo="no_logo.png" clientname="No Client"/>
+  <modules>
+    <mod title="VISIBILITY" labelstart="bottom">
+      <dna visible="true" title="SEO" painpoint="false"/>
+      <dna visible="true" title="PAID SEARCH" painpoint="false"/>
+      <dna visible="true" title="PAID SOCIAL" painpoint="false"/>
+      <dna visible="true" title="PERFORMANCE DISPLAY" painpoint="false"/>
+      <dna visible="true" title="PUBLISHER DETAIL" painpoint="false"/>
+      <dna visible="true" title="ACQUISITION EMAIL" painpoint="false"/>
+      <dna visible="true" title="AFFILIATE MARKETING" painpoint="false"/>
+    </mod>
+    <mod title="PERSUASION" labelstart="top">
+      <dna visible="true" title="CUSTOM" painpoint="false"/>
+      <dna visible="true" title="USER CENTRIC DESIGN" painpoint="false"/>
+      <dna visible="true" title="USER EXPERIENCE" painpoint="false"/>
+      <dna visible="true" title="CONTENT RELEVANCE" painpoint="false"/>
+      <dna visible="true" title="SCENT OPTIMISATION" painpoint="false"/>
+      <dna visible="true" title="PRODUCT DISPLAY" painpoint="false"/>
+      <dna visible="true" title="TECHNOLOGY" painpoint="false"/>
+    </mod>
+    <mod title="INTERACTION" labelstart="bottom">
+      <dna visible="true" title="SOCIAL INTERACTION" painpoint="false"/>
+      <dna visible="true" title="TOUCH POINTS" painpoint="false"/>
+      <dna visible="true" title="ENQUIRY MANAGEMENT" painpoint="false"/>
+      <dna visible="true" title="eCRM" painpoint="false"/>
+      <dna visible="true" title="SHOPPING PROCESS" painpoint="false"/>
+      <dna visible="true" title="LIFECYCLE MESSAGING" painpoint="false"/>
+      <dna visible="false" title="" painpoint="false"/>
+    </mod>
+  </modules>
+  <kpis active="true">
+    <kpi label="33333" value="80000" units="Visitors" additional=""/>
+    <kpi label="Current Persuasion" value="33333" units="Leads" additional="1.7%"/>
+    <kpi label="Current Interaction" value="116" units="Sales" additional="33333"/>
+  </kpis>
+  <targets active="true">
+    <target initiallabel="Current Visibility" initialvalue="80000" initialunits="Current Visitors" targetlabel="Visibility Target" targetvalue="100000" targetunits="Target Visitors" additional="+25%"/>
+    <target initiallabel="Current Persuasion" initialvalue="1700" initialunits="Current Leads" targetlabel="Target Persuasion" targetvalue="2400" targetunits="Target Leads" additional="+29%"/>
+    <target initiallabel="Current Interaction" initialvalue="262" initialunits="Sales" targetlabel="Target Interaction" targetvalue="432" targetunits="Target Sales" additional="+39%"/>
+  </targets>
+</root>
