@@ -94,7 +94,7 @@ package com.radical.ipros
 			var fileStream = new FileStream();
 			fileStream.open(file, FileMode.WRITE);
 			fileStream.writeMultiByte(rootClass.buildXML(), "iso-8859-1");
-			Feedback.showFeedback("File successfully published");
+			Feedback.showFeedback("File successfully published. Starting Presentation.");
 		}
 		
 		private static function handleLoad(e:Event) {

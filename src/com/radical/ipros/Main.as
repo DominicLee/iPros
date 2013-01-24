@@ -46,6 +46,8 @@ package com.radical.ipros
 			CustomEvents.addEventListener("TARGETS_READY", prepTarget);
 			CommsEngine.init(this);
 			stage.addEventListener(KeyboardEvent.KEY_DOWN, readKeyboard);
+			stage.addEventListener(MouseEvent.CLICK, getMouse);
+			stage.addEventListener(MouseEvent.RIGHT_CLICK, getMouse);
 		}
 		
 		private function endIntro(e:Event) {
@@ -125,6 +127,17 @@ package com.radical.ipros
 				stage.displayState=StageDisplayState.NORMAL;
 			}
         }
+		
+		private function getMouse(e:MouseEvent) {
+			switch (e.type) {
+				case "click":
+					stepForward();
+					break
+				case "rightClick":
+					stepBackward();
+					break
+			}
+		}
 		
 		private function stepForward() {
 			AnimEngine.stepForward();
