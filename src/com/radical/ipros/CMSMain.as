@@ -123,7 +123,7 @@ package com.radical.ipros
 				_target = getChildByName("Target" + _counter) as MovieClip;
 				_retXML.targets.appendChild(_target.getState());
 			}
-			trace(_retXML);
+			//trace(_retXML);
 			return _retXML;
 		}
 		

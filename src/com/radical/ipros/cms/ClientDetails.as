@@ -52,10 +52,11 @@ package com.radical.ipros.cms
 		
 		public function publish() {
 			destinationFile = File.documentsDirectory.resolvePath("Source2Sale/" + LogoName.text);
-			sourceFile = File.applicationDirectory.resolvePath(LogoName.text);
+			//sourceFile = File.applicationDirectory.resolvePath(LogoName.text);
 			try {
 				sourceFile.copyTo(destinationFile, true);
 			} catch (e:Error) {
+				MonsterDebugger.trace(this,e);
 				trace("No new image selected, not copying");
 				return
 			}

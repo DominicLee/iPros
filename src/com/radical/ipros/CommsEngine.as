@@ -11,6 +11,7 @@ package com.radical.ipros
 	import flash.net.FileFilter;
 	import flash.net.FileReference;
 	import flash.display.MovieClip;
+	import caurina.transitions.Tweener;
 	import com.radical.ipros.cms.Feedback;
 	/**
 	 * ...
@@ -31,6 +32,7 @@ package com.radical.ipros
 		}
 		
 		public static function init(_rootref:*) {
+			mFileReference = File.documentsDirectory;
 			rootClass = _rootref;
 			myStream = new FileStream();
 			myStream.addEventListener(Event.COMPLETE, handleLoad, false, 0, true);
@@ -53,7 +55,7 @@ package com.radical.ipros
 				var _targetFile = File.documentsDirectory.resolvePath("Source2Sale/no_logo.png");
 				originalFile.copyTo(_targetFile, true)
 				Feedback.showFeedback("No config file found - publishing defaults");
-				getConfig();
+				Tweener.addTween(CommsEngine, { time:2, onComplete: getConfig});
 			}
 		}
 		
@@ -73,6 +75,7 @@ package com.radical.ipros
 		}
 		
 		public static function saveConfigToFile() {
+			mFileReference = File.documentsDirectory;
 			mFileReference.addEventListener(Event.SELECT, saveFileSelected);
 			mFileReference.browseForSave("Please select a destination to save to");
 		}
@@ -94,7 +97,7 @@ package com.radical.ipros
 			var fileStream = new FileStream();
 			fileStream.open(file, FileMode.WRITE);
 			fileStream.writeMultiByte(rootClass.buildXML(), "iso-8859-1");
-			Feedback.showFeedback("File successfully published. Starting Presentation.");
+			Feedback.showFeedback("File successfully published.");
 		}
 		
 		private static function handleLoad(e:Event) {
